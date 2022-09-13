@@ -1,57 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Snap Homepage</title>
- <link rel="stylesheet" href="./style.css">
-</head>
-
-<body>
- <main>
-  <header class="header">
-   <nav class="nav">
-    <h1 class="title"> <img src="./images/logo.svg" alt=""> </h1>
-    <ul class="nav-items">
-
-     <!-- Features Menu -->
-     <li class="menu">
-      <a href="#" class="dropbtn">Features <img src="./images/icon-arrow-down.svg" alt=""></a>
-      <div id="feature" class="sub-menu feature">
-       <a href=""> <img src="./images/icon-todo.svg" alt="">
-        Todo List</a>
-       <a href=""> <img src="./images/icon-calendar.svg" alt="">  Calendar</a>
-       <a href=""> <img src="./images/icon-reminders.svg" alt=""> Reminders</a>
-       <a href=""> <img src="./images/icon-planning.svg" alt=""> Planning</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="flex">
+      <nav id="navbar" class="navbar">
+        <div class="nav-items">
+          <a class="nav-btn">
+            Feature
+            <img src="./images/icon-arrow-down.svg" alt="arrow-down" />
+          </a>
+          <div id="feature" class="sub-menu feature">
+            <a href="#">Todo List</a>
+            <a href="#">Calendar</a>
+            <a href="#">Reminders</a>
+            <a href="#">Planning</a>
+          </div>
+        </div>
+        <div class="nav-items">
+          <a class="nav-btn">
+            Company
+            <img src="./images/icon-arrow-down.svg" alt="arrow-down" />
+          </a>
+          <div id="company" class="sub-menu company">
+            <a href="#">History</a>
+            <a href="#">Our Team</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+        <div class="nav-items">
+          <a href="#">Careers</a>
+        </div>
+        <div class="nav-items">
+          <a href="#">About</a>
+        </div>
+        <div class="nav-items btn-container">
+          <button href="#" class="btn login-btn">Login</button>
+          <button href="#" class="btn register-btn">Register</button>
+        </div>
+        <a href="#" id="close-btn" class="closebtn">
+          <img src="./images/icon-close-menu.svg" alt=""
+        /></a>
+      </nav>
+      <!-- Title Logo -->
+      <div id="home-logo">
+        <a href="#home" class="logo">
+          <img class="logo" src="./images/logo.svg" alt="snap" />
+        </a>
       </div>
-     </li>
-
-     <li class="menu">
-
-      <a href="#" class="dropbtn">Company <img src="./images/icon-arrow-down.svg" alt=""></a>
-      <div id="company" class="sub-menu company">
-       <a href=""> History</a>
-       <a> Our Team</a>
-       <a>Blog</a>
-      </div>
-     </li>
-     </li>
-     <li><a href="#">Careers</a></li>
-     <li><a href="#">About</a></li>
-    </ul>
-   </nav>
-   <div>
-    <button class="btn btn -login">Login</button>
-    <button class='register-btn btn '>Register</button>
-   </div>
-  </header>
-  <section>
-
-  </section>
- </main>
- <script src="./app.js"></script>
-</body>
-
+      <span style="font-size: 30px; cursor: pointer" id="open-nav"
+        ><img src="./images/icon-menu.svg" alt=""
+      /></span>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
