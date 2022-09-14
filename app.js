@@ -1,43 +1,53 @@
-let dropBtn = document.querySelectorAll('.nav-btn');
+let navBtn = document.querySelectorAll('.nav-btn');
 const feature = document.getElementById('feature');
 const company = document.getElementById('company');
 const navBar = document.getElementById('navbar');
-const mobileMenu = document.getElementById('mobile-menu');
-const closeBtn = document.getElementById('close-btn');
-const openNav = document.getElementById('open-nav');
+
+const openNav = document.getElementById('menu-bars');
+const body = document.getElementById('body');
 
 let subMenu = document.getElementsByClassName('sub-menu');
 
-dropBtn[0].addEventListener('click', () => {
+navBtn[0].addEventListener('click', () => {
   feature.classList.toggle('show');
 });
-dropBtn[1].addEventListener('click', () => {
+navBtn[1].addEventListener('click', () => {
   company.classList.toggle('show');
 });
 
+function toggleNav() {
+  // Toggle: Menu Bars Open/Closed
+  openNav.classList.toggle('change');
+  // Toggle: Menu Active
+  navBar.classList.toggle('overlay-active');
+  if (navBar.classList.contains('overlay-active')) {
+    navBar.classList.replace('overlay-slide-left', 'overlay-slide-right');
+
+    body.style.backgroundColor = 'rgba(0,0,0,0.6)';
+
+    // Animate-In - Nav Items
+  } else {
+    navBar.classList.replace('overlay-slide-right', 'overlay-slide-left');
+
+    body.style.backgroundColor = '#fff';
+  }
+}
+// Submenu hide and show
 window.onclick = function (event) {
   if (!event.target.matches('.nav-btn')) {
     for (let i = 0; i < subMenu.length; i++) {
-      let openMenu = subMenu[i];
-      if (openMenu.classList.contains('show')) {
-        openMenu.classList.remove('show');
+      // let openMenu = subMenu[i];
+      if (subMenu[i].classList.contains('show')) {
+        subMenu[i].classList.remove('show');
       }
     }
   }
 };
-
-openNav.addEventListener('click', () => {
-  navBar.style.width = '250px';
-  document.body.style.backgroundColor = 'rgba(0,0,0,0.6)';
-});
-let closeNavbar = () => {
-  document.getElementById('navbar').style.width = '0';
-  document.body.style.backgroundColor = '#fff';
-};
-closeBtn.addEventListener('click', closeNavbar);
 window.addEventListener('resize', () => {
   if (window.innerWidth >= '900') {
     console.log('hello');
-    closeNavbar();
+    body.style.backgroundColor = '#fff';
   }
 });
+// Event Listeners
+openNav.addEventListener('click', toggleNav);

@@ -7,19 +7,27 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body id="body" class="">
     <div class="flex">
-      <nav id="navbar" class="navbar">
+      <nav id="navbar" class="navbar overlay-slide-left">
         <div class="nav-items">
           <a class="nav-btn">
             Feature
             <img src="./images/icon-arrow-down.svg" alt="arrow-down" />
           </a>
           <div id="feature" class="sub-menu feature">
-            <a href="#">Todo List</a>
-            <a href="#">Calendar</a>
-            <a href="#">Reminders</a>
-            <a href="#">Planning</a>
+            <a href="#"
+              ><img src="./images/icon-todo.svg" alt="" /> Todo List</a
+            >
+            <a href="#"
+              ><img src="./images/icon-calendar.svg" alt="" /> Calendar</a
+            >
+            <a href="#"
+              ><img src="./images/icon-reminders.svg" alt="" /> Reminders</a
+            >
+            <a href="#"
+              ><img src="./images/icon-reminders.svg" alt="" /> Planning</a
+            >
           </div>
         </div>
         <div class="nav-items">
@@ -40,22 +48,30 @@
           <a href="#">About</a>
         </div>
         <div class="nav-items btn-container">
-          <button href="#" class="btn login-btn">Login</button>
-          <button href="#" class="btn register-btn">Register</button>
+          <a href="#" class="btn login-btn">Login</a>
+          <a href="#" class="btn register-btn">Register</a>
         </div>
-        <a href="#" id="close-btn" class="closebtn">
+        <!-- <a href="#" id="close-btn" class="closebtn">
           <img src="./images/icon-close-menu.svg" alt=""
-        /></a>
+        /></a> -->
       </nav>
       <!-- Title Logo -->
-      <div id="home-logo">
-        <a href="#home" class="logo">
-          <img class="logo" src="./images/logo.svg" alt="snap" />
-        </a>
-      </div>
-      <span style="font-size: 30px; cursor: pointer" id="open-nav"
+      <!-- <span style="font-size: 30px; cursor: pointer" id="open-nav"
         ><img src="./images/icon-menu.svg" alt=""
-      /></span>
+        /></span> -->
+    </div>
+    <!-- Menu-Bars -->
+    <div class="menu-bars" id="menu-bars">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+
+    <!-- Title -->
+    <div id="home-logo">
+      <a href="#home" class="logo">
+        <img class="logo" src="./images/logo.svg" alt="snap" />
+      </a>
     </div>
     <script src="app.js"></script>
   </body>
